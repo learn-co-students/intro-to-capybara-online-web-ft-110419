@@ -2,6 +2,7 @@
 require 'rspec'
 require 'capybara/rspec'
 require 'capybara/dsl'
+# require 'pry'
 
 # Configure RSpec
 RSpec.configure do |config|
@@ -13,6 +14,7 @@ end
 # Define the application we're testing
 def app
   # Load the application defined in config.ru
+  # binding.pry
   Rack::Builder.parse_file('config.ru').first
 end
 
